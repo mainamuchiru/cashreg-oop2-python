@@ -11,11 +11,11 @@ class CashRegister:
     
     @discount.setter
     def discount(self, value):
-        if isinstance(value, int) and value == range(0, 100):
-            self._discount = value
-        else:
-            print("Not valid discount")
-            self._discount = 0
+      if isinstance(value, int) and value in range(0, 100):
+          self._discount = value
+      else:
+          print("Not valid discount")
+          self._discount = 0
 
     def add_item(self, item, price, quantity=1):
         self.total += price * quantity
